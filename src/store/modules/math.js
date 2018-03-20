@@ -39,10 +39,10 @@ export default {
   },
 
   actions: {
-    checkAnswer: ({commit}, payload) => {
-      let answer = parseInt(payload.answer)
-      commit('setWasCorrect', answer === payload.solution)
-      if (answer === payload.solution) {
+    checkAnswer: ({commit}, {answer, solution}) => {
+      let isCorrect = Number(answer) === Number(solution)
+      commit('setWasCorrect', isCorrect)
+      if (isCorrect) {
         commit('incrementCorrect')
       }
       commit('incrementTotal')
