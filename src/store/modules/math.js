@@ -50,11 +50,8 @@ export default {
   },
 
   mutations: {
-    updateMin (state, value) {
-      state.config.numberMin = parseInt(value)
-    },
-    updateMax (state, value) {
-      state.config.numberMax = parseInt(value)
+    setConfigItem (state, {field, value}) {
+      state.config[field] = value
     },
     setProblem (state, value) {
       state.problem = value
