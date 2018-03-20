@@ -4,7 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import VuexI18n from 'vuex-i18n'
+
+Vue.use(VuexI18n.plugin, store)
 Vue.config.productionTip = false
+
+Vue.i18n.add('en', require('./lang/en.json')) // Load translations from external file
+Vue.i18n.add('fr', {})
+Vue.i18n.set('en')
 
 /* eslint-disable no-new */
 new Vue({
