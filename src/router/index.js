@@ -11,5 +11,15 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld
     }
+    // {
+    //   path: '/kids/math',
+    //   name: 'math',
+    //   component: MathForKids
+    // },
+    // {
+    //   path: 'rpgs/dungeons-dragons/encounter-calculator',
+    //   name: 'encounter-calculator',
+    //   component: EncounterCalculator
+    // }
   ]
 })
