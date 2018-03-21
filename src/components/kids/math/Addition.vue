@@ -56,8 +56,7 @@ export default {
     createProblem () {
       let num1 = _.random(this.config.numberMin, this.config.numberMax)
       let num2 = _.random(this.config.numberMin, this.config.numberMax)
-      this.problem.number1 = num1
-      this.problem.number2 = num2
+      this.setProblem({number1: num1, number2: num2})
       if (this.config.useTotalForLimit && this.solution > this.config.numberMax) {
         this.createProblem() // Recursive call
       }
