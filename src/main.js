@@ -10,8 +10,8 @@ Vue.use(VuexI18n.plugin, store)
 Vue.config.productionTip = false
 
 Vue.i18n.add('en', require('./lang/en.json')) // Load translations from external file
-Vue.i18n.add('fr', {})
-Vue.i18n.set('en')
+Vue.i18n.add('fr', require('./lang/fr.json'))
+Vue.i18n.set('fr')
 
 /* eslint-disable no-new */
 new Vue({
