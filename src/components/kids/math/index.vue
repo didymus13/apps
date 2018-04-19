@@ -42,6 +42,6 @@ export default {
 <style lang="scss" scoped>
   .math-hero-photo {
     background-image: url('/static/math.jpeg');
-    background-size:cover;
+    background-size: cover;
   }
 </style>

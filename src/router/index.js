@@ -5,6 +5,7 @@ const KidsMath = () => import('@/components/kids/math')
 const KidsMathConfig = () => import('@/components/kids/math/Config')
 const KidsMathAddition = () => import('@/components/kids/math/Addition')
 const KidsMathSubtraction = () => import('@/components/kids/math/Subtraction')
+const EncounterCalculator = () => import('@/components/EncounterCalculator')
 Vue.use(Router)
 
 export default new Router({
@@ -35,11 +36,11 @@ export default new Router({
           name: 'math-subtraction'
         }
       ]
+    },
+    {
+      path: 'rpgs/dungeons-dragons/encounter-calculator',
+      name: 'encounter-calculator',
+      component: EncounterCalculator
     }
-    // {
-    //   path: 'rpgs/dungeons-dragons/encounter-calculator',
-    //   name: 'encounter-calculator',
-    //   component: EncounterCalculator
-    // }
   ]
 })
