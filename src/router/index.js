@@ -38,7 +38,7 @@ export default new Router({
       ]
     },
     {
-      path: 'rpgs/dungeons-dragons/encounter-calculator',
+      path: '/rpgs/dungeons-dragons/encounter-calculator',
       name: 'encounter-calculator',
       component: EncounterCalculator
     }
