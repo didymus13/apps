@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
   data () {
     return {
@@ -16,8 +17,10 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['closeMenu']),
     setLocale (lang) {
       this.$i18n.set(lang)
+      this.closeMenu()
     }
   }
 }

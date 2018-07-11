@@ -11,7 +11,20 @@ export default new Vuex.Store({
   },
   state () {
     return {
-
+      menu: {
+        isActive: false
+      }
+    }
+  },
+  mutations: {
+    toggleMenu (state) {
+      state.menu.isActive = !state.menu.isActive
+    },
+    closeMenu (state) {
+      state.menu.isActive = false
+    },
+    openMenu (state) {
+      state.menu.isActive = true
     }
   }
 })

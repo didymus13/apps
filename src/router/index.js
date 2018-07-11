@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+
+const LandingPage = () => import('@/components/LandingPage')
 const KidsMath = () => import('@/components/kids/math')
 const KidsMathConfig = () => import('@/components/kids/math/Config')
 const KidsMathAddition = () => import('@/components/kids/math/Addition')
@@ -12,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'home',
+      component: LandingPage
     },
     {
       path: '/kids/math',
