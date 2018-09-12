@@ -5,6 +5,7 @@ const KidsMath = () => import('@/components/kids/math')
 const KidsMathConfig = () => import('@/components/kids/math/Config')
 const KidsMathAddition = () => import('@/components/kids/math/Addition')
 const KidsMathSubtraction = () => import('@/components/kids/math/Subtraction')
+const KidsMathMultiplication = () => import('@/components/kids/math/Multiplication')
 const EncounterCalculator = () => import('@/components/EncounterCalculator')
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
           path: 'subtraction',
           component: KidsMathSubtraction,
           name: 'math-subtraction'
+        },
+        {
+          path: 'multiplication',
+          component: KidsMathMultiplication,
+          name: 'math-multiplication'
         }
       ]
     },
