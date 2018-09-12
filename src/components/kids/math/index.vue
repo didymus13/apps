@@ -14,7 +14,7 @@
             <ul>
               <li><router-link :to="{ name: 'math-addition', params: {} }">{{ $t('Addition') }}</router-link></li>
               <li><router-link :to="{ name: 'math-subtraction', params: {} }">{{ $t('Subtraction') }}</router-link></li>
-              <!-- <li><router-link :to="{ name: 'math-multiplication', params: {} }">Multiplication</router-link></li> -->
+              <li><router-link :to="{ name: 'math-multiplication', params: {} }">{{ $t('Multiplication') }}</router-link></li>
               <!-- <li><router-link :to="{ name: 'math-division', params: {} }">Division</router-link></li> -->
               <li><router-link :to="{ name: 'math-config', params: {} }">{{ $t('Config') }}</router-link></li>
             </ul>
