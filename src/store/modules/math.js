@@ -13,6 +13,7 @@ export default {
     config: {
       numberMin: 0,
       numberMax: 12,
+      forcedNumber: null,
       useTotalForLimit: true,
       wholeAnswersOnly: true,
       positiveAnswersOnly: true
@@ -64,6 +65,9 @@ export default {
     },
     setWasCorrect (state, value) {
       state.result.wasCorrect = value
+    },
+    setForcedNumber (state, value) {
+      state.forcedNumber = value > 0 ? value : ''
     }
   }
 }

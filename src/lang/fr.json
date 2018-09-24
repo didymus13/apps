@@ -3,5 +3,6 @@
   "useTotalForLimit": "Utiliser le total pour la limite",
   "wholeAnswersOnly": "Réponses entières seulement",
   "positiveAnswersOnly": "Réponses positives seulement",
-  "Answer": "Réponse"
+  "Answer": "Réponse",
+  "forcedNumber": "Forcer l'un des nombres"
 }

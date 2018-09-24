@@ -16,6 +16,13 @@
         </div>
       </div>
 
+      <div class="field is-horizontal">
+        <label for="" class="label">{{ $t('forcedNumber')}}</label>
+        <div class="control">
+          <input type="number" class="input" v-model="forcedNumber">
+        </div>
+      </div>
+
       <div class="field">
         <input type="checkbox" name="useTotalForLimit" id="useTotalForLimit" class="switch is-rounded" v-model="useTotalForLimit">
         <label for="useTotalForLimit">{{ $t('useTotalForLimit') }}</label>
@@ -81,6 +88,14 @@ export default {
       },
       set (e) {
         this.setConfigItem({field: 'positiveAnswersOnly', value: e})
+      }
+    },
+    forcedNumber: {
+      get () {
+        return this.$store.state.math.config.forcedNumber
+      },
+      set (e) {
+        this.setConfigItem({field: 'forcedNumber', value: e ? parseInt(e) : ''})
       }
     }
   },

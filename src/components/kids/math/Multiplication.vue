@@ -52,10 +52,10 @@ export default {
     ...mapActions(['checkAnswer']),
     ...mapMutations(['setProblem']),
     createProblem () {
-      let num1 = _.random(this.config.numberMin, this.config.numberMax)
-      let num2 = _.random(this.config.numberMin, this.config.numberMax)
-      this.problem.number1 = num1
-      this.problem.number2 = num2
+      this.setProblem({
+        number1: this.config.forcedNumber ? this.config.forcedNumber : _.random(this.config.numberMin, this.config.numberMax),
+        number2: _.random(this.config.numberMin, this.config.numberMax)
+      })
     },
     verify () {
       this.checkAnswer({answer: this.answer, solution: this.solution})
