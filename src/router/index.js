@@ -6,7 +6,9 @@ const KidsMathConfig = () => import('@/components/kids/math/Config')
 const KidsMathAddition = () => import('@/components/kids/math/Addition')
 const KidsMathSubtraction = () => import('@/components/kids/math/Subtraction')
 const KidsMathMultiplication = () => import('@/components/kids/math/Multiplication')
-const EncounterCalculator = () => import('@/components/EncounterCalculator')
+const EncounterCalculator = () => import('@/components/rpgs/EncounterCalculator')
+const RpgLanding = () => import('@/components/rpgs/Rpgs')
+const InitiativeTracker = () => import('@/components/rpgs/InitiativeTracker')
 Vue.use(Router)
 
 export default new Router({
@@ -44,9 +46,21 @@ export default new Router({
       ]
     },
     {
-      path: '/rpgs/dungeons-dragons/encounter-calculator',
-      name: 'encounter-calculator',
-      component: EncounterCalculator
+      path: '/rpgs',
+      name: 'rpgs',
+      component: RpgLanding,
+      children: [
+        {
+          path: 'dungeons-dragons/encounter-calculator',
+          name: 'encounter-calculator',
+          component: EncounterCalculator
+        },
+        {
+          path: 'dungeons-dragons/initiative-tracker',
+          name: 'initiative-tracker',
+          component: InitiativeTracker
+        }
+      ]
     }
   ]
 })
