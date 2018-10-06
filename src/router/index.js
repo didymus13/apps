@@ -8,7 +8,8 @@ const KidsMathSubtraction = () => import('@/components/kids/math/Subtraction')
 const KidsMathMultiplication = () => import('@/components/kids/math/Multiplication')
 const EncounterCalculator = () => import('@/components/rpgs/EncounterCalculator')
 const RpgLanding = () => import('@/components/rpgs/Rpgs')
-const InitiativeTracker = () => import('@/components/rpgs/InitiativeTracker')
+const InitiativeTracker = () => import('@/components/rpgs/InitiativeTracker/InitiativeTracker')
+
 Vue.use(Router)
 
 export default new Router({
