@@ -2,8 +2,8 @@
   <div id="character-list">
     <slot></slot>
 
-    <div class="field has-addons">
-      <div class="control">
+    <div class="field is-horizontal">
+      <div class="field">
         <input type="number" class="input"
           :placeholder="$t('Init')"
           :value="character.init"

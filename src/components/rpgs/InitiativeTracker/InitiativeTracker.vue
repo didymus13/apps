@@ -6,23 +6,29 @@
       <button class="button is-success" @click="nextPlayer" :title="$t('Next player')">
         <i class="fas fa-step-forward"></i>
       </button>
-      Round: {{ round }} ({{ currentPlayer.name }})
+      Round: {{ round }} ({{ currentPlayer && currentPlayer.name }})
     </h2>
 
-    <round-tracker :round="round" :max="20"></round-tracker>
-
-    <character-list @add="characters.push($event)">
-      <character v-for="(character, i) in sortedCharacters" :character="character" :is-current="i == current" :key="character.cuid">
-      </character>
-    </character-list>
-
-    <div class="field">
-      <label class="label">{{ $t('Notes') }}</label>
-      <div class="control">
-        <textarea class="textarea" v-model="notes" rows="8" cols="80" :placeholder="$t('Put your notes here')"></textarea>
+    <div class="columns">
+      <div class="column">
+        <character-list @add="characters.push($event)">
+          <character v-for="(character, i) in sortedCharacters" :character="character" :is-current="i == current" :key="character.cuid">
+          </character>
+        </character-list>
+        <button class="button is-danger" @click="clear">{{ $t('Clear encounter')}}</button>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">{{ $t('Notes') }}</label>
+          <div class="control">
+            <textarea class="textarea" v-model="notes" rows="8" cols="80" :placeholder="$t('Put your notes here')"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <round-tracker :round="round" :max="20"></round-tracker>
       </div>
     </div>
-    <button class="button is-danger" @click="clear">{{ $t('Clear encounter')}}</button>
   </section>
 </template>
 
@@ -41,11 +47,7 @@ export default {
   },
   data () {
     return {
-      characters: [
-        { init: 12, name: 'Mister Tester', isPc: false, cuid: cuid() },
-        { init: 23, name: 'Captain Spectacular', isPc: true, cuid: cuid() },
-        { init: 9, name: 'Faceless Goon', isPc: false, cuid: cuid() }
-      ],
+      characters: [],
       character: {},
       turn: 0,
       round: 1,

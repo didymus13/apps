@@ -28,16 +28,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$mobile-cutoff: 720px;
 .rounds {
-  float: right;
   width: 2rem;
   display: flex;
   flex-direction: column;
-
+  @media screen and (max-width: $mobile-cutoff) {
+    flex-direction: row;
+  }
   .round {
     border: 1px solid grey;
     text-align: center;
-
+    @media screen and (max-width: $mobile-cutoff) {
+      flex-grow: 1;
+    }
     &.is-active {
       background-color: cyan;
     }
