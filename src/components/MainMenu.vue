@@ -12,6 +12,7 @@
       <div class="navbar-start">
         <router-link :to="{ name: 'math', params: {} }" class="navbar-item">Math for Kids!</router-link>
         <router-link :to="{ name: 'encounter-calculator', params: {} }" class="navbar-item">Encounter Calculator</router-link>
+        <router-link :to="{ name: 'initiative-tracker', params: {} }" class="navbar-item">Initiative Tracker</router-link>
       </div>
 
       <div class="navbar-end">

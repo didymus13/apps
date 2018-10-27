@@ -12,7 +12,11 @@
     <div class="columns">
       <div class="column">
         <character-list @add="characters.push($event)">
-          <character v-for="(character, i) in sortedCharacters" :character="character" :is-current="i == current" :key="character.cuid">
+          <character v-for="(character, i) in sortedCharacters"
+            :character="character"
+            :is-current="i == current"
+            :key="character.cuid"
+            @remove="remove(character.cuid)">
           </character>
         </character-list>
         <button class="button is-danger" @click="clear">{{ $t('Clear encounter')}}</button>
@@ -82,6 +86,7 @@ export default {
       }
     },
     remove (cuid) {
+      console.log(cuid)
       let offset = _.findIndex(this.characters, {cuid: cuid})
       this.characters.splice(offset, 1)
     }

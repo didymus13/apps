@@ -2,6 +2,9 @@
   <div class="character" :class="{'is-pc': character.isPc, 'is-npc': character.isNpc, 'is-active': isCurrent}">
     <div class="init">{{ character.init }}</div>
     <div class="name">{{ character.name }}</div>
+    <div class="">
+      <button class="button is-danger"  @click="$emit('remove', character.id)">X</button>
+    </div>
   </div>
 </template>
 

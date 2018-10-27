@@ -28,10 +28,13 @@
 
 <script>
 import _ from 'lodash'
+import cuid from 'cuid'
 export default {
   data () {
     return {
-      character: {}
+      character: {
+        id: cuid()
+      }
     }
   },
   computed: {
@@ -48,7 +51,9 @@ export default {
       this.reset()
     },
     reset () {
-      this.character = {}
+      this.character = {
+        id: cuid()
+      }
     }
   }
 }
