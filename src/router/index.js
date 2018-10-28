@@ -7,6 +7,8 @@ const KidsMathAddition = () => import('@/components/kids/math/Addition')
 const KidsMathSubtraction = () => import('@/components/kids/math/Subtraction')
 const KidsMathMultiplication = () => import('@/components/kids/math/Multiplication')
 const EncounterCalculator = () => import('@/components/EncounterCalculator')
+const StarfinderEncounterCalculator = () => import('@/components/starfinder/EncounterCalculator')
+
 Vue.use(Router)
 
 export default new Router({
@@ -47,6 +49,11 @@ export default new Router({
       path: '/rpgs/dungeons-dragons/encounter-calculator',
       name: 'encounter-calculator',
       component: EncounterCalculator
+    },
+    {
+      path: '/rpgs/starfinder/encounter-calculator',
+      name: 'starfinder-encounter-calculator',
+      component: StarfinderEncounterCalculator
     }
   ]
 })

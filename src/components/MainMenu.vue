@@ -12,6 +12,9 @@
       <div class="navbar-start">
         <router-link :to="{ name: 'math', params: {} }" class="navbar-item">Math for Kids!</router-link>
         <router-link :to="{ name: 'encounter-calculator', params: {} }" class="navbar-item">Encounter Calculator</router-link>
+        <router-link :to="{ name: 'starfinder-encounter-calculator', params: {} }" class="navbar-item">
+          Starfinder Encounter Calculator
+        </router-link>
       </div>
 
       <div class="navbar-end">
