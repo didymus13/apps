@@ -3,8 +3,8 @@
     <section class="hero is-dark is-medium starfinder-bg">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-1">YASEC</h1>
-          <h3 class="subtitle is-3">Yet another Starfinder encounter calculator</h3>
+          <h1 class="title is-1">YASEC: Yet another Starfinder encounter calculator</h1>
+          <h3 class="subtitle is-3">For Starfinder</h3>
         </div>
       </div>
     </section>
@@ -14,7 +14,7 @@
         <div class="columns">
           <!-- Player Character Information -->
           <div class="column">
-            <h3 class="subtitle is-3">
+            <h3 class="subtitle is-5">
               Average Player Level: {{ averagePlayerLevel }}
               <button class="button is-primary is-small" @click="addPlayer">Add player</button>
             </h3>
@@ -42,9 +42,9 @@
 
           <!-- Monster Section -->
           <div class="column">
-            <h3 class="subtitle is-3">Encounter Cr: {{ encounterCR }} XP: {{ totalXp }}
+            <h3 class="subtitle is-5">Encounter Cr: {{ encounterCR }} XP: {{ totalXp }} Budget: {{ xpBudget }}
               <button class="button is-primary is-small" @click="addMonster">Add Monster</button>
-              Budget: {{ xpBudget }}
+
               <div class="select">
                 <select v-model="difficulty">
                   <option :value="-1">Easy</option>
